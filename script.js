@@ -21,23 +21,29 @@ if (playGame) {
     playerOne === computer
     ? 'tie game' 
     : playerOne === 'rock' && computer ==='paper' 
-    ? 'playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins'
+    ? `playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins`
         : playerOne === 'paper' && computer ==='scissors' 
-       ? 'playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins'
+       ? `playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins`
         : playerOne ==='scissors' && computer ==='rock'
-        ? 'playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins'
-        : 'playerOne: ${playerOne} \n Computer: ${computer} \n PlayerOne wins';
+        ? `playerOne: ${playerOne} \n Computer: ${computer} \n Computer wins`
+        : `playerOne: ${playerOne} \n Computer: ${computer} \n PlayerOne wins`;
         alert(result);
+
         let playAgain = confirm('Do you want to play again?');
-        playAgain ? location.reload(): alert('Thank you for playing');
+       if (playAgain) {
+        location.reload();
+       } else {
+        alert('Thanks for playing');
+       }
     } else {
         alert('You didnt enter rock, paper or scissors');
 
     }
     } else {
-         }     alert("I guess you changed your mind");
+             alert("I guess you changed your mind");
+}
 } else {
     alert('You did not want to play a game');
 }
-    
+
 
